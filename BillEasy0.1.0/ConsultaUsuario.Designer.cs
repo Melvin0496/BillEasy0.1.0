@@ -70,9 +70,11 @@
             // DatosdataGridView
             // 
             this.DatosdataGridView.AllowUserToAddRows = false;
+            this.DatosdataGridView.AllowUserToDeleteRows = false;
             this.DatosdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DatosdataGridView.Location = new System.Drawing.Point(12, 93);
             this.DatosdataGridView.Name = "DatosdataGridView";
+            this.DatosdataGridView.ReadOnly = true;
             this.DatosdataGridView.Size = new System.Drawing.Size(642, 217);
             this.DatosdataGridView.TabIndex = 4;
             // 
