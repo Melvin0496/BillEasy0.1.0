@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.CodigoPostalTextBox = new System.Windows.Forms.TextBox();
-            this.NombretextBox = new System.Windows.Forms.TextBox();
+            this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.CiudadIdtextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,12 +47,12 @@
             this.CodigoPostalTextBox.Size = new System.Drawing.Size(191, 20);
             this.CodigoPostalTextBox.TabIndex = 24;
             // 
-            // NombretextBox
+            // NombreTextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(135, 59);
-            this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(191, 20);
-            this.NombretextBox.TabIndex = 23;
+            this.NombreTextBox.Location = new System.Drawing.Point(135, 59);
+            this.NombreTextBox.Name = "NombreTextBox";
+            this.NombreTextBox.Size = new System.Drawing.Size(191, 20);
+            this.NombreTextBox.TabIndex = 23;
             // 
             // CiudadIdtextBox
             // 
@@ -152,7 +152,7 @@
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.CodigoPostalTextBox);
-            this.Controls.Add(this.NombretextBox);
+            this.Controls.Add(this.NombreTextBox);
             this.Controls.Add(this.CiudadIdtextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -171,7 +171,7 @@
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.TextBox CodigoPostalTextBox;
-        private System.Windows.Forms.TextBox NombretextBox;
+        private System.Windows.Forms.TextBox NombreTextBox;
         private System.Windows.Forms.TextBox CiudadIdtextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

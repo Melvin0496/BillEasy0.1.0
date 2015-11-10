@@ -42,9 +42,11 @@ namespace BillEasy0._1._0
             {
                 if (usuarios.VerificarUsuario() == UsuariotextBox.Text && usuarios.VerificarContrasena() == ContrasenatextBox.Text)
                 {
+                    
+                    this.Visible = false;
+                    this.Hide();
                     BillEasy billEasy = new BillEasy();
                     billEasy.ShowDialog();
-                    Limpiar();
                 }
                 else
                 {

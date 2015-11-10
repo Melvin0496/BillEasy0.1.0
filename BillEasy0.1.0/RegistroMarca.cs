@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using BLL;
+using System.Text.RegularExpressions;
 namespace BillEasy0._1._0
 {
     public partial class RegistroMarca : Form
@@ -17,30 +19,48 @@ namespace BillEasy0._1._0
             InitializeComponent();
         }
 
+        private int Validar()
+        {
+            int retorno = 0;
+            if(NombreTextBox.Text == "")
+            {
+                MessageBox.Show("Por favor complete los campos ", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+               
+            }
+            else
+            {
+                Regex espacio = new Regex(@"\s+");
+                NombreTextBox.Text = espacio.Replace(NombreTextBox.Text, " ");
+                retorno += 1;
+            }
+            
+            return retorno;
+        }
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             Marcas marca = new Marcas();
             int id;
             int.TryParse(MarcaIdtextBox.Text, out id);
             marca.Buscar(id);
-            NombretextBox.Text = marca.Nombre;
+            NombreTextBox.Text = marca.Nombre;
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
             MarcaIdtextBox.Clear();
-            NombretextBox.Clear();
+            NombreTextBox.Clear();
         }
 
         private void ButtonGuardar_Click(object sender, EventArgs e)
         {
             Marcas marca = new Marcas();
-            if (MarcaIdtextBox.Text.Length > 0)
+            if (MarcaIdtextBox.Text.Length > 0 && Validar() == 1)
             {
                 int id ;
                 int.TryParse(MarcaIdtextBox.Text, out id);
                 marca.MarcaId = id;
-                marca.Nombre = NombretextBox.Text;
+                marca.Nombre = NombreTextBox.Text;
                 if (marca.Editar())
                 {
                     MessageBox.Show("Marca Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -52,13 +72,14 @@ namespace BillEasy0._1._0
                 }
             }
             else
-            if (NombretextBox.TextLength == 0)
+            if (NombreTextBox.TextLength == 0)
             {
                 MessageBox.Show("Debe de completar todos los campos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (MarcaIdtextBox.Text.Length == 0)
+
+            else if (MarcaIdtextBox.Text.Length == 0 && Validar() == 1)
             {
-                marca.Nombre = NombretextBox.Text;
+                marca.Nombre = NombreTextBox.Text;
                 if (marca.Insertar())
                 {
                     MessageBox.Show("Marca Guardada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);

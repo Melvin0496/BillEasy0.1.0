@@ -36,14 +36,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.UsuarioIdtextBox = new System.Windows.Forms.TextBox();
-            this.NombretextBox = new System.Windows.Forms.TextBox();
-            this.NombreUsuariotextBox = new System.Windows.Forms.TextBox();
-            this.ContrasenatextBox = new System.Windows.Forms.TextBox();
-            this.AreatextBox = new System.Windows.Forms.TextBox();
+            this.NombreTextBox = new System.Windows.Forms.TextBox();
+            this.NombreUsuarioTextBox = new System.Windows.Forms.TextBox();
+            this.ContrasenaTextBox = new System.Windows.Forms.TextBox();
+            this.AreaTextBox = new System.Windows.Forms.TextBox();
             this.FechamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.button = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ButtonGuardar = new System.Windows.Forms.Button();
+            this.EliminarButton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -109,33 +109,33 @@
             this.UsuarioIdtextBox.TabIndex = 6;
             this.UsuarioIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsuarioIdtextBox_KeyPress);
             // 
-            // NombretextBox
+            // NombreTextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(119, 57);
-            this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(191, 20);
-            this.NombretextBox.TabIndex = 7;
+            this.NombreTextBox.Location = new System.Drawing.Point(119, 57);
+            this.NombreTextBox.Name = "NombreTextBox";
+            this.NombreTextBox.Size = new System.Drawing.Size(191, 20);
+            this.NombreTextBox.TabIndex = 7;
             // 
-            // NombreUsuariotextBox
+            // NombreUsuarioTextBox
             // 
-            this.NombreUsuariotextBox.Location = new System.Drawing.Point(119, 96);
-            this.NombreUsuariotextBox.Name = "NombreUsuariotextBox";
-            this.NombreUsuariotextBox.Size = new System.Drawing.Size(191, 20);
-            this.NombreUsuariotextBox.TabIndex = 8;
+            this.NombreUsuarioTextBox.Location = new System.Drawing.Point(119, 96);
+            this.NombreUsuarioTextBox.Name = "NombreUsuarioTextBox";
+            this.NombreUsuarioTextBox.Size = new System.Drawing.Size(191, 20);
+            this.NombreUsuarioTextBox.TabIndex = 8;
             // 
-            // ContrasenatextBox
+            // ContrasenaTextBox
             // 
-            this.ContrasenatextBox.Location = new System.Drawing.Point(119, 128);
-            this.ContrasenatextBox.Name = "ContrasenatextBox";
-            this.ContrasenatextBox.Size = new System.Drawing.Size(191, 20);
-            this.ContrasenatextBox.TabIndex = 9;
+            this.ContrasenaTextBox.Location = new System.Drawing.Point(119, 128);
+            this.ContrasenaTextBox.Name = "ContrasenaTextBox";
+            this.ContrasenaTextBox.Size = new System.Drawing.Size(191, 20);
+            this.ContrasenaTextBox.TabIndex = 9;
             // 
-            // AreatextBox
+            // AreaTextBox
             // 
-            this.AreatextBox.Location = new System.Drawing.Point(119, 161);
-            this.AreatextBox.Name = "AreatextBox";
-            this.AreatextBox.Size = new System.Drawing.Size(191, 20);
-            this.AreatextBox.TabIndex = 10;
+            this.AreaTextBox.Location = new System.Drawing.Point(119, 161);
+            this.AreaTextBox.Name = "AreaTextBox";
+            this.AreaTextBox.Size = new System.Drawing.Size(191, 20);
+            this.AreaTextBox.TabIndex = 10;
             // 
             // FechamaskedTextBox
             // 
@@ -159,33 +159,33 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // button
+            // ButtonGuardar
             // 
-            this.button.Image = global::BillEasy0._1._0.Properties.Resources._1445977752_Save;
-            this.button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button.Location = new System.Drawing.Point(146, 261);
-            this.button.MaximumSize = new System.Drawing.Size(81, 44);
-            this.button.MinimumSize = new System.Drawing.Size(81, 44);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(81, 44);
-            this.button.TabIndex = 14;
-            this.button.Text = "Guardar";
-            this.button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button.UseVisualStyleBackColor = true;
-            this.button.Click += new System.EventHandler(this.button3_Click);
+            this.ButtonGuardar.Image = global::BillEasy0._1._0.Properties.Resources._1445977752_Save;
+            this.ButtonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonGuardar.Location = new System.Drawing.Point(146, 261);
+            this.ButtonGuardar.MaximumSize = new System.Drawing.Size(81, 44);
+            this.ButtonGuardar.MinimumSize = new System.Drawing.Size(81, 44);
+            this.ButtonGuardar.Name = "ButtonGuardar";
+            this.ButtonGuardar.Size = new System.Drawing.Size(81, 44);
+            this.ButtonGuardar.TabIndex = 14;
+            this.ButtonGuardar.Text = "Guardar";
+            this.ButtonGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonGuardar.UseVisualStyleBackColor = true;
+            this.ButtonGuardar.Click += new System.EventHandler(this.ButtonGuardar_Click);
             // 
-            // button2
+            // EliminarButton
             // 
-            this.button2.Image = global::BillEasy0._1._0.Properties.Resources._1445976510_Delete;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(253, 261);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 44);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Eliminar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.EliminarButton.Image = global::BillEasy0._1._0.Properties.Resources._1445976510_Delete;
+            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarButton.Location = new System.Drawing.Point(253, 261);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(81, 44);
+            this.EliminarButton.TabIndex = 13;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // Nuevobutton
             // 
@@ -204,16 +204,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 317);
+            this.ClientSize = new System.Drawing.Size(379, 318);
             this.Controls.Add(this.Buscarbutton);
-            this.Controls.Add(this.button);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ButtonGuardar);
+            this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.FechamaskedTextBox);
-            this.Controls.Add(this.AreatextBox);
-            this.Controls.Add(this.ContrasenatextBox);
-            this.Controls.Add(this.NombreUsuariotextBox);
-            this.Controls.Add(this.NombretextBox);
+            this.Controls.Add(this.AreaTextBox);
+            this.Controls.Add(this.ContrasenaTextBox);
+            this.Controls.Add(this.NombreUsuarioTextBox);
+            this.Controls.Add(this.NombreTextBox);
             this.Controls.Add(this.UsuarioIdtextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -244,14 +244,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox UsuarioIdtextBox;
-        private System.Windows.Forms.TextBox NombretextBox;
-        private System.Windows.Forms.TextBox NombreUsuariotextBox;
-        private System.Windows.Forms.TextBox ContrasenatextBox;
-        private System.Windows.Forms.TextBox AreatextBox;
+        private System.Windows.Forms.TextBox NombreTextBox;
+        private System.Windows.Forms.TextBox NombreUsuarioTextBox;
+        private System.Windows.Forms.TextBox ContrasenaTextBox;
+        private System.Windows.Forms.TextBox AreaTextBox;
         private System.Windows.Forms.MaskedTextBox FechamaskedTextBox;
         private System.Windows.Forms.Button Nuevobutton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.Button ButtonGuardar;
         private System.Windows.Forms.Button Buscarbutton;
     }
 }

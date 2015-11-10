@@ -12,6 +12,7 @@ namespace BillEasy0._1._0
         {
             InitializeComponent();
             miError = new ErrorProvider();
+            BuscarcomboBox.SelectedIndex = 0;
         }
 
         public void Error()
@@ -38,9 +39,9 @@ namespace BillEasy0._1._0
                     }
                     else
                     {
-                        condicion = "UsuarioId =" + DatostextBox.Text;
+                        condicion = "UsuarioId = " + DatostextBox.Text;
                     }
-                    dataTable = usuario.Listado(" UsuarioId, Nombre, NombreUsuario, Contrasena, Area, Fecha",condicion, "");
+                    dataTable = usuario.Listado(" UsuarioId, Nombres, NombreUsuario, Contrasena, Area, Fecha",condicion, "");
                     DatosdataGridView.DataSource = dataTable;
                 }
             }
@@ -52,9 +53,9 @@ namespace BillEasy0._1._0
                 }
                 else
                 {
-                    condicion = string.Format("Nombre = '{0}' ", DatostextBox.Text);
+                    condicion = string.Format("Nombres = '{0}' ", DatostextBox.Text);
                 }
-                dataTable = usuario.Listado(" UsuarioId, Nombre, NombreUsuario, Contrasena, Area, Fecha ", condicion, "");
+                dataTable = usuario.Listado(" UsuarioId, Nombres, NombreUsuario, Contrasena, Area, Fecha ", condicion, "");
                 DatosdataGridView.DataSource = dataTable;
 
             }
@@ -68,7 +69,7 @@ namespace BillEasy0._1._0
                 {
                     condicion = string.Format("NombreUsuario = '{0}'",DatostextBox.Text);
                 }
-                dataTable = usuario.Listado(" UsuarioId, Nombre, NombreUsuario, Contrasena, Area, Fecha ", condicion, "");
+                dataTable = usuario.Listado(" UsuarioId, Nombres, NombreUsuario, Contrasena, Area, Fecha ", condicion, "");
                 DatosdataGridView.DataSource = dataTable;
             }
             if(BuscarcomboBox.SelectedIndex == 3)
@@ -81,7 +82,7 @@ namespace BillEasy0._1._0
                 {
                     condicion = string.Format("Area = '{0}'",DatostextBox.Text);
                 }
-                dataTable = usuario.Listado(" UsuarioId, Nombre, NombreUsuario, Contrasena, Area, Fecha ", condicion, "");
+                dataTable = usuario.Listado(" UsuarioId, Nombres, NombreUsuario, Contrasena, Area, Fecha ", condicion, "");
                 DatosdataGridView.DataSource = dataTable;
             }
 

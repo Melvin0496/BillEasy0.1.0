@@ -30,5 +30,33 @@ namespace BillEasy0._1._0
             consultaUsuario.MdiParent = this;
             consultaUsuario.Show();
         }
+
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroMarca registro = new RegistroMarca();
+            registro.MdiParent = this;
+            registro.Show();
+        }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaMarca consultaMarca = new ConsultaMarca();
+            consultaMarca.MdiParent = this;
+            consultaMarca.Show();
+        }
+
+        private void ciudadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroCiudad ciudad = new RegistroCiudad();
+            ciudad.MdiParent = this;
+            ciudad.Show();
+        }
+
+        private void ciudadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaCiudad consultaCiudad = new ConsultaCiudad();
+            consultaCiudad.MdiParent = this;
+            consultaCiudad.Show();
+        }
     }
 }

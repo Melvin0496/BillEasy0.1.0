@@ -32,7 +32,7 @@
             this.ButtonGuardar = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
-            this.NombretextBox = new System.Windows.Forms.TextBox();
+            this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.MarcaIdtextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -92,12 +92,12 @@
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
-            // NombretextBox
+            // NombreTextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(135, 59);
-            this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(191, 20);
-            this.NombretextBox.TabIndex = 23;
+            this.NombreTextBox.Location = new System.Drawing.Point(135, 59);
+            this.NombreTextBox.Name = "NombreTextBox";
+            this.NombreTextBox.Size = new System.Drawing.Size(191, 20);
+            this.NombreTextBox.TabIndex = 23;
             // 
             // MarcaIdtextBox
             // 
@@ -128,12 +128,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 211);
+            this.ClientSize = new System.Drawing.Size(379, 193);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.ButtonGuardar);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.Nuevobutton);
-            this.Controls.Add(this.NombretextBox);
+            this.Controls.Add(this.NombreTextBox);
             this.Controls.Add(this.MarcaIdtextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -150,7 +150,7 @@
         private System.Windows.Forms.Button ButtonGuardar;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button Nuevobutton;
-        private System.Windows.Forms.TextBox NombretextBox;
+        private System.Windows.Forms.TextBox NombreTextBox;
         private System.Windows.Forms.TextBox MarcaIdtextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

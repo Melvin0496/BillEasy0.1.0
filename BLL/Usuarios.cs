@@ -70,11 +70,11 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
             DataTable dt = new DataTable();
-            dt = (conexion.ObtenerDatos(String.Format("Select UsuarioId, Nombre,NombreUsuario,Contrasena,Area,Fecha From Usuarios Where UsuarioId = {0}", idBuscado)));
+            dt = (conexion.ObtenerDatos(String.Format("Select UsuarioId, Nombres,NombreUsuario,Contrasena,Area,Fecha From Usuarios Where UsuarioId = {0}", idBuscado)));
             if (dt.Rows.Count > 0)
             {
                 this.UsuarioId = (int)dt.Rows[0]["UsuarioId"];
-                this.Nombre = dt.Rows[0]["Nombre"].ToString();
+                this.Nombre = dt.Rows[0]["Nombres"].ToString();
                 this.NombreUsuario = dt.Rows[0]["NombreUsuario"].ToString();
                 this.Contrasena = dt.Rows[0]["Contrasena"].ToString();
                 this.Area = dt.Rows[0]["Area"].ToString();
@@ -87,7 +87,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
             bool retorno = false;
-            retorno = conexion.Ejecutar(string.Format("Update Usuarios set Nombre = '{0}',NombreUsuario = '{1}',Contrasena = '{2}',Area = '{3}',Fecha = '{4}' where UsuarioId = '{5}'",this.Nombre,this.NombreUsuario,this.Contrasena,this.Area,this.Fecha,this.UsuarioId));
+            retorno = conexion.Ejecutar(string.Format("Update Usuarios set Nombres = '{0}',NombreUsuario = '{1}',Contrasena = '{2}',Area = '{3}',Fecha = '{4}' where UsuarioId = '{5}'",this.Nombre,this.NombreUsuario,this.Contrasena,this.Area,this.Fecha,this.UsuarioId));
             return retorno;
         }
 
@@ -104,7 +104,7 @@ namespace BLL
             ConexionDb conexion = new ConexionDb();
             bool retorno = false;
 
-            retorno = conexion.Ejecutar(string.Format("Insert into Usuarios(Nombre,NombreUsuario,Contrasena,Area,Fecha) values('{0}','{1}','{2}','{3}','{4}')", this.Nombre, this.NombreUsuario, this.Contrasena, this.Area, this.Fecha));
+            retorno = conexion.Ejecutar(string.Format("Insert into Usuarios(Nombres,NombreUsuario,Contrasena,Area,Fecha) values('{0}','{1}','{2}','{3}','{4}')", this.Nombre, this.NombreUsuario, this.Contrasena, this.Area, this.Fecha));
 
             return retorno;
         }
@@ -112,12 +112,12 @@ namespace BLL
         public override DataTable Listado(string campos, string condicion, string orden)
         {
             ConexionDb conexion = new ConexionDb();
-          /*  string ordenFinal = "";
+            string ordenFinal = "";
             if (!orden.Equals(""))
-                ordenFinal = " Orden by  " + orden;*/
+                ordenFinal = " Orden by  " + orden;
 
             return conexion.ObtenerDatos("Select " + campos +
-                " From Usuarios Where " + condicion + "");
+                " From Usuarios Where " + condicion + ""+ordenFinal);
         }
     }
 }
