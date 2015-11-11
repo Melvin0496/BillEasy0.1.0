@@ -58,5 +58,17 @@ namespace BillEasy0._1._0
             consultaCiudad.MdiParent = this;
             consultaCiudad.Show();
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroClientes clientes = new RegistroClientes();
+            clientes.MdiParent = this;
+            clientes.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

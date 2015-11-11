@@ -76,6 +76,12 @@
     <Compile Include="RegistroCiudad.Designer.cs">
       <DependentUpon>RegistroCiudad.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroClientes.Designer.cs">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
     <EmbeddedResource Include="RegistroCiudad.resx">
       <DependentUpon>RegistroCiudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClientes.resx">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroMarca.resx">
       <DependentUpon>RegistroMarca.cs</DependentUpon>

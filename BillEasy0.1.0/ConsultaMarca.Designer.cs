@@ -111,7 +111,10 @@
             this.Controls.Add(this.DatostextBox);
             this.Controls.Add(this.BuscarcomboBox);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ConsultaMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaMarca";
             ((System.ComponentModel.ISupportInitialize)(this.DatosdataGridView)).EndInit();
             this.ResumeLayout(false);

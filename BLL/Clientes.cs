@@ -74,16 +74,16 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
             DataTable dt = new DataTable();
-            dt = conexion.ObtenerDatos(String.Format("Select Nombres,Apellidos,Telefono,Celular,Direccion, Email,Ceudla From Where ClienteId = {0}",idBuscado));
+            dt = conexion.ObtenerDatos(String.Format("Select *from Clientes where ClienteId = {0}",idBuscado));
             if(dt.Rows.Count > 0)
             {
-                this.ClienteId = (int)dt.Rows[0]["ClienteId"];
+                
                 this.Nombres = dt.Rows[0]["Nombres"].ToString();
-                this.Nombres = dt.Rows[0]["Apellidos"].ToString();
-                this.Nombres = dt.Rows[0]["Telefono"].ToString();
-                this.Nombres = dt.Rows[0]["Celular"].ToString();
-                this.Nombres = dt.Rows[0]["Email"].ToString();
-                this.Nombres = dt.Rows[0]["Cedula"].ToString();
+                this.Apellidos = dt.Rows[0]["Apellidos"].ToString();
+                this.Telefono = dt.Rows[0]["Telefono"].ToString();
+                this.Celular = dt.Rows[0]["Celular"].ToString();
+                this.Email = dt.Rows[0]["Email"].ToString();
+                this.Cedula = dt.Rows[0]["Cedula"].ToString();
             }
             return dt.Rows.Count > 0;
         }
