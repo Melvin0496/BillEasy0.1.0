@@ -34,10 +34,8 @@ namespace BillEasy0._1._0
             
             int id;
             int.TryParse(ClienteIdtextBox.Text,out id);
-           
-            Ciudades ciudad = new Ciudades();
 
-            CiudadcomboBox.SelectedItem = ciudad.Listado("CiudadId", "1=1", "").Rows[0]["CiudadId"];
+            Ciudades ciudad = new Ciudades();
 
             clientes.ClienteId = id;
             clientes.CiudadId = (int)CiudadcomboBox.SelectedValue;

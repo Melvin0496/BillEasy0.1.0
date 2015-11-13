@@ -77,5 +77,11 @@ namespace BillEasy0._1._0
             consultaClientes.MdiParent = this;
             consultaClientes.Show();
         }
+
+        private void BillEasy_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+            Application.ExitThread();
+        }
     }
 }
