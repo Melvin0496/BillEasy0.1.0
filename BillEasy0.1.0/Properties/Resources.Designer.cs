@@ -129,5 +129,25 @@ namespace BillEasy0._1._0.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Melvin_BillEasy {
+            get {
+                object obj = ResourceManager.GetObject("Logo Melvin BillEasy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Melvin_BillEasy1 {
+            get {
+                object obj = ResourceManager.GetObject("Logo Melvin BillEasy1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

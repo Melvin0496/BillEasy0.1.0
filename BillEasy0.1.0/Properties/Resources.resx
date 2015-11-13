@@ -139,5 +139,10 @@
   <data name="logo-admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
- 
+  <data name="Logo Melvin BillEasy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Melvin BillEasy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo Melvin BillEasy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Melvin BillEasy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
