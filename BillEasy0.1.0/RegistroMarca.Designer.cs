@@ -105,6 +105,7 @@
             this.MarcaIdtextBox.Name = "MarcaIdtextBox";
             this.MarcaIdtextBox.Size = new System.Drawing.Size(111, 20);
             this.MarcaIdtextBox.TabIndex = 22;
+            this.MarcaIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MarcaIdtextBox_KeyPress);
             // 
             // label2
             // 

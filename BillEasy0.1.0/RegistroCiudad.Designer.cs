@@ -38,33 +38,37 @@
             this.ButtonGuardar = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
+            this.DatosCiudadgroupBox = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DatosCiudadgroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // CodigoPostalTextBox
             // 
-            this.CodigoPostalTextBox.Location = new System.Drawing.Point(135, 98);
+            this.CodigoPostalTextBox.Location = new System.Drawing.Point(109, 104);
             this.CodigoPostalTextBox.Name = "CodigoPostalTextBox";
-            this.CodigoPostalTextBox.Size = new System.Drawing.Size(191, 20);
+            this.CodigoPostalTextBox.Size = new System.Drawing.Size(214, 20);
             this.CodigoPostalTextBox.TabIndex = 24;
             // 
             // NombreTextBox
             // 
-            this.NombreTextBox.Location = new System.Drawing.Point(135, 59);
+            this.NombreTextBox.Location = new System.Drawing.Point(109, 68);
             this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(191, 20);
+            this.NombreTextBox.Size = new System.Drawing.Size(214, 20);
             this.NombreTextBox.TabIndex = 23;
             // 
             // CiudadIdtextBox
             // 
-            this.CiudadIdtextBox.Location = new System.Drawing.Point(135, 23);
+            this.CiudadIdtextBox.Location = new System.Drawing.Point(109, 32);
             this.CiudadIdtextBox.Name = "CiudadIdtextBox";
-            this.CiudadIdtextBox.Size = new System.Drawing.Size(111, 20);
+            this.CiudadIdtextBox.Size = new System.Drawing.Size(134, 20);
             this.CiudadIdtextBox.TabIndex = 22;
+            this.CiudadIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CiudadIdtextBox_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 98);
+            this.label3.Location = new System.Drawing.Point(28, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 18;
@@ -73,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 62);
+            this.label2.Location = new System.Drawing.Point(28, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 17;
@@ -82,17 +86,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 26);
+            this.label1.Location = new System.Drawing.Point(28, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Ciudadd:";
+            this.label1.Text = "CiudadId:";
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::BillEasy0._1._0.Properties.Resources._1443839488_file_search;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(252, 11);
+            this.Buscarbutton.Location = new System.Drawing.Point(249, 20);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(74, 42);
             this.Buscarbutton.TabIndex = 31;
@@ -105,7 +109,7 @@
             // 
             this.ButtonGuardar.Image = global::BillEasy0._1._0.Properties.Resources._1445977752_Save;
             this.ButtonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonGuardar.Location = new System.Drawing.Point(160, 172);
+            this.ButtonGuardar.Location = new System.Drawing.Point(138, 142);
             this.ButtonGuardar.MaximumSize = new System.Drawing.Size(81, 44);
             this.ButtonGuardar.MinimumSize = new System.Drawing.Size(81, 44);
             this.ButtonGuardar.Name = "ButtonGuardar";
@@ -120,7 +124,7 @@
             // 
             this.EliminarButton.Image = global::BillEasy0._1._0.Properties.Resources._1445976510_Delete;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(264, 172);
+            this.EliminarButton.Location = new System.Drawing.Point(242, 142);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(81, 44);
             this.EliminarButton.TabIndex = 29;
@@ -133,7 +137,7 @@
             // 
             this.Nuevobutton.Image = global::BillEasy0._1._0.Properties.Resources._1445976554_Plus__Orange;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevobutton.Location = new System.Drawing.Point(53, 172);
+            this.Nuevobutton.Location = new System.Drawing.Point(31, 142);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(81, 44);
             this.Nuevobutton.TabIndex = 28;
@@ -142,26 +146,49 @@
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
+            // DatosCiudadgroupBox
+            // 
+            this.DatosCiudadgroupBox.Controls.Add(this.CiudadIdtextBox);
+            this.DatosCiudadgroupBox.Controls.Add(this.Buscarbutton);
+            this.DatosCiudadgroupBox.Controls.Add(this.label1);
+            this.DatosCiudadgroupBox.Controls.Add(this.ButtonGuardar);
+            this.DatosCiudadgroupBox.Controls.Add(this.label2);
+            this.DatosCiudadgroupBox.Controls.Add(this.EliminarButton);
+            this.DatosCiudadgroupBox.Controls.Add(this.label3);
+            this.DatosCiudadgroupBox.Controls.Add(this.Nuevobutton);
+            this.DatosCiudadgroupBox.Controls.Add(this.NombreTextBox);
+            this.DatosCiudadgroupBox.Controls.Add(this.CodigoPostalTextBox);
+            this.DatosCiudadgroupBox.Location = new System.Drawing.Point(12, 71);
+            this.DatosCiudadgroupBox.Name = "DatosCiudadgroupBox";
+            this.DatosCiudadgroupBox.Size = new System.Drawing.Size(355, 196);
+            this.DatosCiudadgroupBox.TabIndex = 32;
+            this.DatosCiudadgroupBox.TabStop = false;
+            this.DatosCiudadgroupBox.Text = "Datos Ciudad";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(66, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(242, 36);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Registro de ciudades";
+            // 
             // RegistroCiudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 240);
-            this.Controls.Add(this.Buscarbutton);
-            this.Controls.Add(this.ButtonGuardar);
-            this.Controls.Add(this.EliminarButton);
-            this.Controls.Add(this.Nuevobutton);
-            this.Controls.Add(this.CodigoPostalTextBox);
-            this.Controls.Add(this.NombreTextBox);
-            this.Controls.Add(this.CiudadIdtextBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(379, 276);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.DatosCiudadgroupBox);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegistroCiudad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegistroCiudad";
+            this.Text = "Registro de ciudades";
+            this.DatosCiudadgroupBox.ResumeLayout(false);
+            this.DatosCiudadgroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +206,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox DatosCiudadgroupBox;
+        private System.Windows.Forms.Label label4;
     }
 }

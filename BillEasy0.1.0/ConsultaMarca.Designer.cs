@@ -41,7 +41,7 @@
             // 
             this.button1.Image = global::BillEasy0._1._0.Properties.Resources._1446228633_kde_folder_print;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(573, 307);
+            this.button1.Location = new System.Drawing.Point(178, 264);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 40);
             this.button1.TabIndex = 11;
@@ -54,17 +54,17 @@
             this.DatosdataGridView.AllowUserToAddRows = false;
             this.DatosdataGridView.AllowUserToDeleteRows = false;
             this.DatosdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DatosdataGridView.Location = new System.Drawing.Point(12, 84);
+            this.DatosdataGridView.Location = new System.Drawing.Point(12, 86);
             this.DatosdataGridView.Name = "DatosdataGridView";
             this.DatosdataGridView.ReadOnly = true;
-            this.DatosdataGridView.Size = new System.Drawing.Size(642, 217);
+            this.DatosdataGridView.Size = new System.Drawing.Size(247, 172);
             this.DatosdataGridView.TabIndex = 10;
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::BillEasy0._1._0.Properties.Resources._1443839488_file_search;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(579, 26);
+            this.Buscarbutton.Location = new System.Drawing.Point(183, 37);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 43);
             this.Buscarbutton.TabIndex = 9;
@@ -75,9 +75,9 @@
             // 
             // DatostextBox
             // 
-            this.DatostextBox.Location = new System.Drawing.Point(139, 38);
+            this.DatostextBox.Location = new System.Drawing.Point(118, 49);
             this.DatostextBox.Name = "DatostextBox";
-            this.DatostextBox.Size = new System.Drawing.Size(434, 20);
+            this.DatostextBox.Size = new System.Drawing.Size(59, 20);
             this.DatostextBox.TabIndex = 8;
             // 
             // BuscarcomboBox
@@ -87,9 +87,9 @@
             this.BuscarcomboBox.Items.AddRange(new object[] {
             "MarcaId",
             "Nombre"});
-            this.BuscarcomboBox.Location = new System.Drawing.Point(12, 38);
+            this.BuscarcomboBox.Location = new System.Drawing.Point(12, 49);
             this.BuscarcomboBox.Name = "BuscarcomboBox";
-            this.BuscarcomboBox.Size = new System.Drawing.Size(121, 21);
+            this.BuscarcomboBox.Size = new System.Drawing.Size(100, 21);
             this.BuscarcomboBox.TabIndex = 7;
             // 
             // label1
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 368);
+            this.ClientSize = new System.Drawing.Size(271, 307);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.DatosdataGridView);
             this.Controls.Add(this.Buscarbutton);
@@ -115,7 +115,7 @@
             this.MinimizeBox = false;
             this.Name = "ConsultaMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultaMarca";
+            this.Text = "Consulta de marca";
             ((System.ComponentModel.ISupportInitialize)(this.DatosdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

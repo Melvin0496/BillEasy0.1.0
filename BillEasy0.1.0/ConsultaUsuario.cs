@@ -15,22 +15,15 @@ namespace BillEasy0._1._0
             BuscarcomboBox.SelectedIndex = 0;
         }
 
-        public void Error()
-        {
-            miError.SetError(DatostextBox,"Debe Completar el campo");
-        }
+     
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             Usuarios usuario = new Usuarios();
             DataTable dataTable = new DataTable();
             string condicion;
 
-            if(DatostextBox.TextLength == 0)
-            {
-                Error();
-            }
-            else
-            {
+         
+            
                 if (BuscarcomboBox.SelectedIndex == 0)
                 {
                     if(DatostextBox.Text.Trim().Length == 0)
@@ -44,7 +37,7 @@ namespace BillEasy0._1._0
                     dataTable = usuario.Listado(" UsuarioId, Nombres, NombreUsuario, Contrasena, Area, Fecha",condicion, "");
                     DatosdataGridView.DataSource = dataTable;
                 }
-            }
+            
             if(BuscarcomboBox.SelectedIndex == 1)
             {
                 if(DatostextBox.Text.Trim().Length == 1)

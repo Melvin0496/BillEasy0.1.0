@@ -160,6 +160,9 @@ namespace BillEasy0._1._0
             }
         }
 
-       
+        private void UsuarioIdtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

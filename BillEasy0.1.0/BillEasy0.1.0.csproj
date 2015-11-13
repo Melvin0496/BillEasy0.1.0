@@ -58,6 +58,12 @@
     <Compile Include="ConsultaCiudad.Designer.cs">
       <DependentUpon>ConsultaCiudad.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaClientes.Designer.cs">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaCiudad.resx">
       <DependentUpon>ConsultaCiudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaClientes.resx">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaMarca.resx">
       <DependentUpon>ConsultaMarca.cs</DependentUpon>

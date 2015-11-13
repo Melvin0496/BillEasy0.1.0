@@ -27,22 +27,27 @@ namespace BillEasy0._1._0
             CelularmaskedTextBox.Clear();
             DirecciontextBox.Clear();
             EmailtextBox.Clear();
-            CedulatextBox.Clear();
+            CedulamaskedTextBox.Clear();
         }
         public void Datos(Clientes clientes)
         {
             
             int id;
             int.TryParse(ClienteIdtextBox.Text,out id);
+           
+            Ciudades ciudad = new Ciudades();
+
+            CiudadcomboBox.SelectedItem = ciudad.Listado("CiudadId", "1=1", "").Rows[0]["CiudadId"];
 
             clientes.ClienteId = id;
+            clientes.CiudadId = (int)CiudadcomboBox.SelectedValue;
             clientes.Nombres = NombrestextBox.Text;
             clientes.Apellidos = ApellidostextBox.Text;
             clientes.Telefono = TelefonomaskedTextBox.Text;
             clientes.Celular = CelularmaskedTextBox.Text;
             clientes.Direccion = DirecciontextBox.Text;
             clientes.Email = EmailtextBox.Text;
-            clientes.Cedula = CedulatextBox.Text;
+            clientes.Cedula = CedulamaskedTextBox.Text;
         }
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
@@ -83,6 +88,7 @@ namespace BillEasy0._1._0
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             Clientes clientes = new Clientes();
+            Ciudades ciudad = new Ciudades();
      
             if (clientes.Buscar(ConversionId()))
             {
@@ -92,7 +98,8 @@ namespace BillEasy0._1._0
                 CelularmaskedTextBox.Text = clientes.Celular;
                 DirecciontextBox.Text = clientes.Direccion;
                 EmailtextBox.Text = clientes.Email;
-                CedulatextBox.Text = clientes.Cedula;
+                CedulamaskedTextBox.Text = clientes.Cedula;
+                
             }
             else
             {
@@ -101,5 +108,29 @@ namespace BillEasy0._1._0
             
 
         }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            Clientes clientes = new Clientes();
+            clientes.ClienteId = ConversionId();
+            if (clientes.Eliminar() == true)
+            {
+                MessageBox.Show("Cliente eliminado","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ese cliente no existe","Alerta",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void RegistroClientes_Load(object sender, EventArgs e)
+        {
+            Ciudades ciudades = new Ciudades();
+            CiudadcomboBox.DataSource = ciudades.Listado("CiudadId,Nombre,CodigoPostal ","1=1","");
+            CiudadcomboBox.DisplayMember = string.Format("Nombre");
+            CiudadcomboBox.ValueMember = "CiudadId";
+        }
+
+        
     }
 }

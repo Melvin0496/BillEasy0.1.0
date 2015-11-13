@@ -70,5 +70,12 @@ namespace BillEasy0._1._0
         {
             Application.Exit();
         }
+
+        private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaClientes consultaClientes = new ConsultaClientes();
+            consultaClientes.MdiParent = this;
+            consultaClientes.Show();
+        }
     }
 }
