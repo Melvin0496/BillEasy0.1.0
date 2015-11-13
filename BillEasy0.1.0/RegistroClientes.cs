@@ -33,10 +33,7 @@ namespace BillEasy0._1._0
         {
             
             int id;
-            int.TryParse(ClienteIdtextBox.Text,out id);
-
-            Ciudades ciudad = new Ciudades();
-
+            int.TryParse(ClienteIdtextBox.Text, out id);
             clientes.ClienteId = id;
             clientes.CiudadId = (int)CiudadcomboBox.SelectedValue;
             clientes.Nombres = NombrestextBox.Text;
