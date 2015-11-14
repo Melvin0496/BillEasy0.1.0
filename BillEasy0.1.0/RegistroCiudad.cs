@@ -18,6 +18,14 @@ namespace BillEasy0._1._0
             InitializeComponent();
         }
 
+        private void LlenarDatos(Ciudades ciudad)
+        {
+            ciudad.Nombre = NombreTextBox.Text;
+            int codigoPostal;
+            int.TryParse(CodigoPostalTextBox.Text,out codigoPostal);
+            ciudad.CodigoPostal = codigoPostal;
+        }
+
         private int Validar()
         {
             int  retorno = 0;
@@ -65,11 +73,11 @@ namespace BillEasy0._1._0
             Ciudades ciudad = new Ciudades();
             if (CiudadIdtextBox.Text.Length > 0 && Validar() == 1)
             {
-               
-                
-                ciudad.CiudadId = int.Parse(CiudadIdtextBox.Text);
-                ciudad.Nombre = NombreTextBox.Text;
-                ciudad.CodigoPostal = int.Parse(CodigoPostalTextBox.Text);
+
+                int id;
+                int.TryParse(CiudadIdtextBox.Text, out id);
+                ciudad.CiudadId = id;
+                LlenarDatos(ciudad);
                 if (ciudad.Editar())
                 {
                     MessageBox.Show("Ciudad Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -87,8 +95,7 @@ namespace BillEasy0._1._0
             }
             else if (CiudadIdtextBox.Text.Length == 0 && Validar() == 1)
             {
-                ciudad.Nombre = NombreTextBox.Text;
-                ciudad.CodigoPostal = int.Parse(CodigoPostalTextBox.Text);
+                LlenarDatos(ciudad);
                 if (ciudad.Insertar())
                 {
                     MessageBox.Show("Ciudad Guardada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -123,16 +130,6 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Error al eliminar la ciudad", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-        }
-
-        private void CiudadIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Handled = true;
-                return;
             }
         }
     }
