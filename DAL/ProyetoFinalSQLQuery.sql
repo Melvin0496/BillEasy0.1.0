@@ -31,7 +31,6 @@ Fecha varchar(10)
 )
 Create Table Ventas(
 VentaId Int Identity Primary Key,
-UsuarioId Int References Usuarios(UsuarioId),
 ClienteId Int References Clientes(ClienteId),
 Fecha Varchar(10),
 ITBIS Float,
@@ -82,6 +81,7 @@ Celular Varchar(12)
 Create Table DetallesVentas(
 VentaId Int References Ventas(VentaId),
 UsuarioId Int References Usuarios(UsuarioId),
+ProductoId int references Productos(ProductoId),
 Cantidad Int,
 Precio Float
 )
