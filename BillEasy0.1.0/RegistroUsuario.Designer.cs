@@ -107,7 +107,6 @@
             this.UsuarioIdtextBox.Name = "UsuarioIdtextBox";
             this.UsuarioIdtextBox.Size = new System.Drawing.Size(111, 20);
             this.UsuarioIdtextBox.TabIndex = 6;
-            this.UsuarioIdtextBox.TextChanged += new System.EventHandler(this.UsuarioIdtextBox_TextChanged);
             this.UsuarioIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsuarioIdtextBox_KeyPress);
             // 
             // NombreTextBox
@@ -205,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 317);
+            this.ClientSize = new System.Drawing.Size(379, 318);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.ButtonGuardar);
             this.Controls.Add(this.EliminarButton);
@@ -229,7 +228,7 @@
             this.MinimumSize = new System.Drawing.Size(395, 356);
             this.Name = "RegistroUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro de Usuarios";
+            this.Text = "Registro de usuarios";
             this.TransparencyKey = System.Drawing.Color.MintCream;
             this.ResumeLayout(false);
             this.PerformLayout();

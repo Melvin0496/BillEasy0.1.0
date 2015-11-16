@@ -45,6 +45,7 @@
     <Compile Include="Ciudades.cs" />
     <Compile Include="Marcas.cs" />
     <Compile Include="Productos.cs" />
+    <Compile Include="Proveedores.cs" />
     <Compile Include="Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

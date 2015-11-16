@@ -17,7 +17,7 @@ namespace BLL
         public float Precio { get; set; }
         public float Costo { get; set; }
         public float ITBIS { get; set; }
-       
+
         public Productos()
         {
             this.ProductoId = 0;
@@ -30,7 +30,7 @@ namespace BLL
             this.ITBIS = 0;
         }
 
-        public Productos(int productoId, int proveedorId, int marcaId, string nombre , int cantidad, float precio, float costo, float iTBIS)
+        public Productos(int productoId, int proveedorId, int marcaId, string nombre, int cantidad, float precio, float costo, float iTBIS)
         {
             this.ProductoId = productoId;
             this.ProveedorId = proveedorId;
@@ -65,7 +65,7 @@ namespace BLL
         {
             bool retorno;
             ConexionDb conexion = new ConexionDb();
-            retorno = conexion.Ejecutar(String.Format("Update Productos set ProveedorId = {0}, MarcaId = {1},Nombre  = '{2}', Cantidad = {3},Precio = {4},Costo = {5}, ITBIS = {6} Where ProductoId = {7}", this.ProveedorId,this.Nombre,this.MarcaId,this.Cantidad,this.Precio,this.Costo,this.ITBIS,this.ProductoId));
+            retorno = conexion.Ejecutar(String.Format("Update Productos set ProveedorId = {0}, MarcaId = {1},Nombre  = '{2}', Cantidad = {3},Precio = {4},Costo = {5}, ITBIS = {6} Where ProductoId = {7}", this.ProveedorId, this.Nombre, this.MarcaId, this.Cantidad, this.Precio, this.Costo, this.ITBIS, this.ProductoId));
             return retorno;
         }
 
@@ -73,7 +73,7 @@ namespace BLL
         {
             bool retorno;
             ConexionDb conexion = new ConexionDb();
-            retorno = conexion.Ejecutar(String.Format("Delete Produyctos Where ProductoId = {0}",this.ProductoId));
+            retorno = conexion.Ejecutar(String.Format("Delete Produyctos Where ProductoId = {0}", this.ProductoId));
             return retorno;
         }
 
@@ -91,8 +91,9 @@ namespace BLL
             string ordenFinal = "";
             if (!orden.Equals(""))
                 ordenFinal = " Orden by " + orden;
-            return conexion.ObtenerDatos("Select "+ campos+ 
-                " From Productos  Where "+ condicion + "" +ordenFinal);
+            return conexion.ObtenerDatos("Select " + campos +
+                " From Productos  Where " + condicion + "" + ordenFinal);
         }
     }
 }
+

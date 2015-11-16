@@ -14,21 +14,71 @@ namespace BillEasy0._1._0
 {
     public partial class RegistroUsuario : Form
     {
+        ErrorProvider miError;
         public RegistroUsuario()
         {
             InitializeComponent();
-            FechamaskedTextBox.Text = String.Format("{0:dd/MM/yyyy}",DateTime.Now);
+            FechamaskedTextBox.Text = String.Format("{0:dd/MM/yyyy}", DateTime.Now);
+            miError = new ErrorProvider();
+        }
+
+        private void LlenarDatos(Usuarios usuarios)
+        {
+            usuarios.Nombre = NombreTextBox.Text;
+            usuarios.NombreUsuario = NombreUsuarioTextBox.Text;
+            usuarios.Contrasena = ContrasenaTextBox.Text;
+            usuarios.Area = AreaTextBox.Text;
+            usuarios.Fecha = FechamaskedTextBox.Text;
+        }
+
+        private int Error()
+        {
+            int contador = 0;
+
+            if (NombreTextBox.Text == "")
+            {
+                miError.SetError(NombreTextBox, "Debe llenar el nombre del empleado");
+                contador = 1;
+            }
+            else
+            {
+                miError.SetError(NombreTextBox, "");
+            }
+            if (NombreUsuarioTextBox.Text == "")
+            {
+                miError.SetError(NombreUsuarioTextBox, "Debe llenar el nombre de usuario");
+                contador = 1;
+            }
+            else
+            {
+                miError.SetError(NombreUsuarioTextBox, "");
+            }
+            if (ContrasenaTextBox.Text == "")
+            {
+                miError.SetError(ContrasenaTextBox, "Debe llenar la contraseña");
+                contador = 1;
+            }
+            else
+            {
+                miError.SetError(ContrasenaTextBox, "");
+            }
+            if (AreaTextBox.Text == "")
+            {
+                miError.SetError(AreaTextBox, "Debe llenar el nombre de usuario");
+                contador = 1;
+            }
+            else
+            {
+                miError.SetError(AreaTextBox, "");
+            }
+           
+            return contador;
         }
 
         private int Validar()
         {
             int retorno = 0;
-            if (NombreTextBox.Text == "" || NombreUsuarioTextBox.Text == ""|| ContrasenaTextBox.Text == "" || AreaTextBox.Text == "" )
-            {
-                MessageBox.Show("Complete los campos que estan vacios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
+          
                 if (!Regex.Match(NombreTextBox.Text, "^[A-Z][a-zA-Z]*$").Success)
                 {
                     MessageBox.Show("Nombre  invalido", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -39,12 +89,12 @@ namespace BillEasy0._1._0
                     retorno += 1;
                     Regex espacio = new Regex(@"\s+");
                     NombreTextBox.Text = espacio.Replace(NombreTextBox.Text, " ");
-                    AreaTextBox.Text = espacio.Replace(AreaTextBox.Text," ");
+                    AreaTextBox.Text = espacio.Replace(AreaTextBox.Text, " ");
 
                 }
-              
-             
-            }
+
+
+            
             return retorno;
         }
 
@@ -69,23 +119,19 @@ namespace BillEasy0._1._0
             NombreUsuarioTextBox.Clear();
             ContrasenaTextBox.Clear();
             AreaTextBox.Clear();
-            
+
         }
 
         private void ButtonGuardar_Click(object sender, EventArgs e)
         {
             Usuarios usuarios = new Usuarios();
 
-            if (UsuarioIdtextBox.Text.Length > 0 && Validar() == 1)
+            if (UsuarioIdtextBox.Text.Length > 0 && Error() == 0 && Validar() == 1)
             {
                 int id;
                 int.TryParse(UsuarioIdtextBox.Text, out id);
                 usuarios.UsuarioId = id;
-                usuarios.Nombre = NombreTextBox.Text;
-                usuarios.NombreUsuario = NombreUsuarioTextBox.Text;
-                usuarios.Contrasena = ContrasenaTextBox.Text;
-                usuarios.Area = AreaTextBox.Text;
-                usuarios.Fecha = FechamaskedTextBox.Text;
+                LlenarDatos(usuarios);
                 if (usuarios.Editar())
                 {
                     MessageBox.Show("Usuario editado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -96,22 +142,13 @@ namespace BillEasy0._1._0
                     MessageBox.Show("Debe de completar todos los campos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
-            if (NombreTextBox.TextLength == 0 || NombreUsuarioTextBox.TextLength == 0 || ContrasenaTextBox.TextLength == 0 || AreaTextBox.TextLength == 0)
+            else if (UsuarioIdtextBox.Text.Length == 0 && Error() == 0  && Validar() == 1)
             {
-                MessageBox.Show("Debe de completar todos los campos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if(UsuarioIdtextBox.Text.Length == 0 && Validar() == 1)
-            {
-               
-                usuarios.Nombre = NombreTextBox.Text;
-                usuarios.NombreUsuario = NombreUsuarioTextBox.Text;
-                usuarios.Contrasena = ContrasenaTextBox.Text;
-                usuarios.Area = AreaTextBox.Text;
-                usuarios.Fecha = FechamaskedTextBox.Text;
+
+                LlenarDatos(usuarios);
                 if (usuarios.Insertar())
                 {
-                    MessageBox.Show("Usuario guardado" ,"Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario guardado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Nuevobutton.PerformClick();
                 }
                 else
@@ -159,10 +196,5 @@ namespace BillEasy0._1._0
                 return;
             }
         }
-
-        private void UsuarioIdtextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
-    }
 }

@@ -83,5 +83,33 @@ namespace BillEasy0._1._0
             Application.Exit();
             Application.ExitThread();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroProducto producto = new RegistroProducto();
+            producto.MdiParent = this;
+            producto.Show();
+        }
+
+        private void productoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaProducto producto = new ConsultaProducto();
+            producto.MdiParent = this;
+            producto.Show();
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroProveedor proveedor = new RegistroProveedor();
+            proveedor.MdiParent = this;
+            proveedor.Show();
+        }
+
+        private void proveedoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaProveedores proveedor = new ConsultaProveedores();
+            proveedor.MdiParent = this;
+            proveedor.Show();
+        }
     }
 }
